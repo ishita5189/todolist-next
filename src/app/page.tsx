@@ -127,8 +127,8 @@ const Page = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="p-4 sm:p-8 bg-white rounded shadow-lg w-full max-w-lg">
-        <h1 className="bg-slate-800 text-white p-5 text-3xl sm:text-5xl font-bold self-center text-center">Today's TodoList</h1>
+      <div className="p-4 sm:p-8 bg-white rounded shadow-lg w-full max-w-xl">
+        <h1 className="bg-slate-800 text-white p-5 text-3xl sm:text-5xl font-bold self-center text-center">TodoList for Today</h1>
         <form onSubmit={submitHandler} className="mt-4">
           {error && <p className="text-red-500 text-center">{error}</p>}
           <div className="flex flex-col gap-4">
