@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## TO-DO List
 
-## Getting Started
+This is a simple To-Do application built with Next JS. The app allows users to add, edit, delete, and mark tasks as completed. It also displays the date and time when each task was created or last edited. The tasks are stored in the browser's local storage, ensuring persistence across page reloads.
 
-First, run the development server:
+![To-Do App Screenshot](public\Todo-list.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+1. Add Tasks: Add a new task with a title and description.
+2. Edit Tasks: Edit the details of an existing task.
+3. Delete Tasks: Remove a task from the list.
+4. Mark as Done: Mark a task as completed or undo the completion status.
+5. Local Storage: Tasks are saved in the browser's local storage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+To get started with the project, follow these steps:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+git clone https://github.com/yourusername/todo-app.git
+cd todo-app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install dependencies: npm install
 
-## Learn More
+3. Start the development server: npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+4. Open your browser and navigate to http://localhost:3000 to see the app in action.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Adding a Task
+1. Enter a task title in the "Enter a task here" input field.
 
-## Deploy on Vercel
+2. Optionally, enter a description in the "Enter description here" input field.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Click the "ADD TASK" button to add the task to the list.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Editing a Task
+1. Click the "Edit" button next to the task you want to edit.
+
+2. The task's title and description will be loaded into the input fields.
+
+3. Modify the details as needed and click the "UPDATE TASK" button to save changes.
+
+# Deleting a Task
+1. Click the "Delete" button next to the task you want to remove.
+
+2. The task will be removed from the list and local storage.
+
+# Marking a Task as Done
+1. Click the "Done" button next to the task you want to mark as completed.
+
+2. The task will be marked as completed and styled with a line-through.
+
+3. Click the "Undo" button to revert the task to its incomplete status.
+
+# Code Structure
+
+src/: The source directory containing all the code files.
+
+components/: Directory containing React components.
+
+Page.tsx: Main component that handles the state and logic for the app.
+
+index.tsx: Entry point for the React application.
+
+App.tsx: Wrapper component for routing and context providers.
+
+styles/: Directory containing CSS files.
+
+index.css: Main stylesheet for the application.
+
+public/: Contains static files like index.html.
+
+package.json: Contains project metadata and dependencies.
+
+
+# Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
