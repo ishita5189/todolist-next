@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.tsx", "src/app/page.tsx", "src/app/MotivationalQuoteButton/MotivationalQuoteDialog.tsx", "src/app/MotivationalQuoteButton/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.tsx", "src/app/page.jsx", "src/app/MotivationalQuoteButton/MotivationalQuoteDialog.jsx", "src/app/MotivationalQuoteButton/page.tsx"],
   "exclude": ["node_modules"]
 }
