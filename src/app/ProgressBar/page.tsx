@@ -1,17 +1,18 @@
 import React from 'react';
-import ProgressBar from './ProgressBar';
 
-const Page: React.FC = () => {
-  const calculateProgress = () => {
-    // Implementation
-    return 50; // Example value
-  };
+interface ProgressBarProps {
+  progress: number;
+}
 
+const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
   return (
-    <div>
-      <ProgressBar progress={calculateProgress()} />
+    <div className="w-full bg-gray-200 rounded-full overflow-hidden h-4 mt-4">
+      <div
+        className="bg-green-500 h-full"
+        style={{ width: `${progress}%` }}
+      />
     </div>
   );
 };
 
-export default Page;
+export default ProgressBar;
