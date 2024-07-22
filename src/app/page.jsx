@@ -1,20 +1,13 @@
 "use client";
-import React, { useState, FormEvent, useEffect } from 'react';
-
-interface Task {
-  title: string;
-  desc: string;
-  date: string; // Added date
-  time: string; // Added time
-  completed: boolean; // Added completion status
-}
+import React, { useState, useEffect } from 'react';
+import MotivationalQuoteButton from './MotivationalQuoteButton/page';
 
 const Page = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [mainTask, setMainTask] = useState<Task[]>([]);
+  const [mainTask, setMainTask] = useState([]);
   const [error, setError] = useState("");
-  const [editIndex, setEditIndex] = useState<number | null>(null); // State for the index of the task being edited
+  const [editIndex, setEditIndex] = useState(null); // State for the index of the task being edited
 
   useEffect(() => {
     // Load tasks from local storage when component mounts
@@ -31,7 +24,7 @@ const Page = () => {
     return { date, time };
   };
 
-  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     if (title.trim() === "") {
       setError("Title is required.");
@@ -40,7 +33,7 @@ const Page = () => {
 
     const { date, time } = getCurrentDateTime();
 
-    let updatedTasks: Task[];
+    let updatedTasks;
     if (editIndex !== null) {
       // Edit existing task
       updatedTasks = mainTask.map((task, index) => 
@@ -62,7 +55,7 @@ const Page = () => {
     setError("");
   };
 
-  const deleteHandler = (i: number) => {
+  const deleteHandler = (i) => {
     const updatedTasks = mainTask.filter((_, index) => index !== i);
     setMainTask(updatedTasks);
 
@@ -70,13 +63,13 @@ const Page = () => {
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
-  const editHandler = (i: number) => {
+  const editHandler = (i) => {
     setTitle(mainTask[i].title);
     setDesc(mainTask[i].desc);
     setEditIndex(i); // Set the index of the task being edited
   };
 
-  const markAsDoneHandler = (i: number) => {
+  const markAsDoneHandler = (i) => {
     const updatedTasks = mainTask.map((task, index) =>
       index === i ? { ...task, completed: !task.completed } : task
     );
@@ -126,7 +119,8 @@ const Page = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-100">
+       <MotivationalQuoteButton />
       <div className="p-4 sm:p-8 bg-white rounded shadow-lg w-full max-w-xl">
         <h1 className="bg-slate-800 text-white p-5 text-3xl sm:text-5xl font-bold self-center text-center">TodoList for Today</h1>
         <form onSubmit={submitHandler} className="mt-4">
