@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import MotivationalQuoteButton from './MotivationalQuoteButton/page';
-import ProgressBar from './ProgressBar'; // Import the ProgressBar component
+import ProgressBar from './ProgressBar'; // Import path should be correct
 
 const Page = () => {
   const [title, setTitle] = useState("");
