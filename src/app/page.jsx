@@ -135,7 +135,7 @@ const Page = () => {
       <div className={`absolute top-4 left-4 ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>
         <button
           onClick={toggleDarkMode}
-          className={`w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} shadow-md`}
+          className={`w-10 h-10 rounded flex items-center justify-center ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} shadow-md`}
         >
           {darkMode ? '🌙' : '🌞'}
         </button>

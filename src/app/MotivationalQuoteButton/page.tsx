@@ -19,7 +19,7 @@ const MotivationalQuoteButton = () => {
         onClick={handleClickOpen}
         className="absolute top-4 right-4 bg-indigo-500 text-white px-4 py-2 shadow-md rounded font-bold"
       >
-        Show Quote
+       Quote
       </button>
       {open && <MotivationalQuoteDialog onClose={handleClose} />}
     </div>
