@@ -26,14 +26,14 @@ const MotivationalQuoteDialog = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
-      <div className="bg-white rounded shadow-lg p-8 max-w-sm w-full">
-        <h2 className="text-2xl font-bold mb-4">Motivational Quote</h2>
+      <div className="bg-gray-500 rounded shadow-lg p-8 max-w-sm w-full">
+        <h2 className="text-2xl text-white font-bold mb-4">Motivational Quote</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
           <div>
-            <p className="text-lg">{quote.text}</p>
-            <p className="text-sm text-gray-600 mt-2">— {quote.author.split(',')[0] || 'Unknown'}</p>
+            <p className="text-lg text-white">{quote.text}</p>
+            <p className="text-sm text-gray-200 mt-2">— {quote.author.split(',')[0] || 'Unknown'}</p>
           </div>
         )}
         <button
